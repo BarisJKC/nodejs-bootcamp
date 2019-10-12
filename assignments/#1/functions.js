@@ -14,3 +14,23 @@ function convertTurkishLira(amount, curreny) {
   // Example usage:
   // convertTurkishLira(6000, 'dollar') this will return 1019.30
 }
+
+const introducer=(name, age, job, livingLocation) => {console.log(`My name is ${name}. I am ${age} years old. I am ${job} and I live in ${livingLocation}.`)}
+
+introducer("Deniz",26,"full stack developer","İstanbul");
+
+const calculateDogAge = (age) => {return age*7}
+
+console.log(`The dog year for this age is ${calculateDogAge(5)}`)
+  
+const convertTurkishLira = (amount, currency) => {
+    const currencyNameArray = ["dollar","euro","pounds"]
+    const currencyValueArray = [1/5,1/6,1/7]
+    for (var i=0;i<currencyNameArray.length;i++) {
+        if(currencyNameArray[i]===currency) {
+            return amount*currencyValueArray[i]
+        }
+    }
+    // currencyNameArray.forEach(element => {if(element===currency) {return amount*currencyValueArray[currencyNameArray.indexOf(element)]}});
+}
+console.log(convertTurkishLira(6000,"dollar"))
